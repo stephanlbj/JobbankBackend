@@ -19,6 +19,9 @@ app.get('/',(req, res)=>{
 res.json({name:"James Carter"})
 })
 
+app.get('/test',(req, res)=>{
+    res.json({name:"Jasssmes Cartersss"})
+    })
 //post new user http://localhost:8000/api/new/Newuser
 //post new post http://localhost:8000/api/post/Newpost
 
