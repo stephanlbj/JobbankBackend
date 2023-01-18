@@ -1,3 +1,4 @@
+import NewPostModel from "../model/NewPostModel.js";
 import { createNewPost,DisLIKEPost,GetAllPosts, LIKEPost, SearchPost, UpdatePost} from "../Services/Newpostservice.js"
 
 
@@ -12,7 +13,7 @@ export const CreateNewpost = async (req, res) => {
 
   export const Allposts = async (req, res) => {
     try {
-      const Posts = await GetAllPosts();
+      const Posts = await NewPostModel.find();
       res.json({ data: Posts, status: "success" });
     } catch (err) {
       res.status(500).json({ error: err.message });

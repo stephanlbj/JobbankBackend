@@ -4,7 +4,9 @@ import cors from "cors"
 import {connect} from "./DB.js"
 import userRoutes from "./routes/Userroutes.js"
 import PostRoutes from "./routes/Newpostroutes.js"
-import Test from "./routes/Test.js"
+ 
+
+
 const app = express()
 dotenv.config()
 const Port = process.env.PORT || 5000
@@ -27,7 +29,7 @@ res.json({name:"James Carter"})
 //new user api..
 app.use('/api/new', userRoutes)
 app.use('/api/post',PostRoutes)
-app.use('/api/Test',Test)
+ 
 
 
 app.listen(Port,()=>{
